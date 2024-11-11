@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#error {
+    color: red;
+}
+
+#notesList {
+    max-width: 400px; /* عرض أقصى لقائمة الملاحظات */
+    margin: auto; /* مركز القائمة */
+    padding: 0; /* إزالة padding للقائمة */
+    list-style-type: none; /* إزالة نقاط القائمة */
+}
+
+.note-item {
+    background-color: white;
+    padding: 10px; /* مساحة داخلية للعنصر */
+    margin: 5px 0; /* مساحة بين العناصر */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white; /* لون النص في الزر */
+    border: none;
+    border-radius: 4px;
+    padding: 5px; /* حجم الزر */
+    cursor: pointer;
+    margin-top: 10px; /* إضافة مسافة فوق الزر */
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
