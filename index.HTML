@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #auth-section, #notes-section {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+        #auth-section input, #auth-section button, #notes-section textarea, #notes-section button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        #notes-list {
+            margin-top: 20px;
+        }
+        .note-box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .note-box button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            position: absolute;
+            bottom:10px
+            right: 10px;
+           // top: 10px;
+        }
+        #logout-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            width: 100%;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <h1>Notes Application</h1>
+    <div id="auth-section">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+    <div id="notes-section" style="display: none;">
+        <textarea id="noteContent" placeholder="Write your note here"></textarea>
+        <button onclick="addNote()">Add Note</button>
+        <div id="notes-list"></div>
+        <button id="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
